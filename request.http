@@ -1,0 +1,173 @@
+### create client
+POST http://localhost:9000/api/clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 44405592,
+  "firstName": "Juan",
+  "lastName": "Pérez",
+  "phone": 555555555,
+  "address": "Sarmiento 405",
+  "email": "juanperez@email.com"
+}
+
+### create
+POST http://localhost:9000/api/clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 12345678,
+  "firstName": "María",
+  "lastName": "López",
+  "phone": 666666666,
+  "address": "Rivadavia 210",
+  "email": "marialopez@email.com"
+}
+
+### create
+POST http://localhost:9000/api/clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 98765432,
+  "firstName": "Luis",
+  "lastName": "González",
+  "phone": 777777777,
+  "address": "Belgrano 123",
+  "email": "luisgonzalez@email.com"
+}
+
+### create
+POST http://localhost:9000/api/clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 55558888,
+  "firstName": "Ana",
+  "lastName": "Martínez",
+  "phone": 888888888,
+  "address": "San Martín 789",
+  "email": "anamartinez@email.com"
+}
+
+### create
+POST http://localhost:9000/api/clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 11112222,
+  "firstName": "Carlos",
+  "lastName": "Rodríguez",
+  "phone": 999999999,
+  "address": "Bolívar 567",
+  "email": "carlosrodriguez@email.com"
+}
+
+### get all
+GET http://localhost:9000/api/clients HTTP/1.1
+
+### get one
+GET http://localhost:9000/api/clients/653a730589b1e6ceb0912b09 HTTP/1.1
+
+### delete
+DELETE http://localhost:9000/api/clients/653a6f7ff8d9eddbed8cef36 HTTP/1.1
+
+### update
+PUT http://localhost:9000/api/clients/653a67d3ca4f30f0df4ec22f HTTP/1.1
+Content-Type: application/json
+
+{
+  "dni": 44405592,
+  "firstName": "Juan",
+  "lastName": "Pérez",
+  "phone": 555555555,
+  "address": "San Martin 522",
+  "email": "juanperez@email.com"
+}
+
+
+
+
+
+
+
+### create order
+POST http://localhost:9000/api/orders HTTP/1.1
+Content-Type: application/json
+
+{
+  "orderNumber": 2,
+  "orderDate": "2023-10-26T00:00:00.000Z",
+  "clientId": "653a730589b1e6ceb0912b09"
+}
+
+### get one
+GET http://localhost:9000/api/orders/653ba44ca7ca76947e42cf7b HTTP/1.1
+
+### delete
+DELETE http://localhost:9000/api/orders/653ba4acdb54b918f3149cab HTTP/1.1
+
+
+
+
+
+
+
+### create product
+POST http://localhost:9000/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+  "code": "ABC123",
+  "description": "Apple",
+  "price": 2
+}
+
+### create product
+POST http://localhost:9000/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+  "code": "GROC005",
+  "description": "Rice",
+  "price": 4.49
+}
+
+### create product
+POST http://localhost:9000/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+  "code": "GRCO021",
+  "description": "Bread",
+  "price": 3.99
+}
+
+### get one
+GET http://localhost:9000/api/products/653b236f960982b619fb9cd2 HTTP/1.1
+
+### get all
+GET http://localhost:9000/api/products HTTP/1.1
+
+
+
+
+
+
+### create product_order
+POST http://localhost:9000/api/productOrder HTTP/1.1
+Content-Type: application/json
+
+{
+  "productId": "653b236f960982b619fb9cd2",
+  "orderId": "653b9ad68b0490bffd73b01f"
+}
+
+### create product_order
+POST http://localhost:9000/api/productOrder HTTP/1.1
+Content-Type: application/json
+
+{
+  "productId": "653b23ea3e14b75ca71d965f",
+  "orderId": "653b9ad68b0490bffd73b01f"
+}
